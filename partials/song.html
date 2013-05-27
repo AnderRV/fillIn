@@ -1,0 +1,20 @@
+<div class="page-header">
+    <h1 class="offset1">{{song.name}} <small>{{song.group}} <a href="#/songlist"><i class="icon-circle-arrow-left"></i></a></small></h1>
+</div>
+
+<div class="row">
+    <div class="span10 offset2">
+        <div id="lyrics">
+            <pre ng-bind-html-unsafe="song.desc"></pre>
+        </div>
+                
+        <br />
+
+        <p id="result"></p>
+        <button id="send_btn" class="btn">CHECK</button>
+
+        <br />
+
+        <a href="#/songlist">Back to songlist</a>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "group": "Judas Priest",
+        "name": "Living after midnight",
+        "label": "living_after_midnight"
+    },
+
+    {
+        "id": 2,
+        "group": "Within Temptation",
+        "name": "Shot in the Dark",
+        "label": "shot_in_the_dark"
+    },
+
+    {
+        "id": 3,
+        "group": "Slipknot",
+        "name": "Snuff",
+        "label": "snuff"
+    },
+
+    {
+        "id": 4,
+        "group": "Guns n' Roses",
+        "name": "Sweet child o'mine",
+        "label": "sweet_child_omine"
+    },
+
+    {
+        "id": 5,
+        "group": "Rainbow",
+        "name": "The Temple of the King",
+        "label": "the_temple_of_the_king"
+    },
+
+    {
+        "id": 6,
+        "group": "Muse",
+        "name": "Uprising",
+        "label": "uprising"
+    },
+
+    {
+        "id": 7,
+        "group": "Nightwish",
+        "name": "The Islander",
+        "label": "the_islander"
+    },
+
+    {
+        "id"  : 8,
+        "group": "Metallica",
+        "name": "Nothing else Matters",
+        "label": "nothing_else_matters"
+    },
+
+    {
+        "id"  : 9,
+        "group": "Blind Guardian",
+        "name": "The Bard's Song",
+        "label": "the_bards_song"
+    },
+
+    {
+        "id"  : 10,
+        "group": "Blackmore's Night",
+        "name": "Loreley",
+        "label": "loreley"
+    },
+
+    {
+        "id"  : 11,
+        "group": "Bullet for My Valentine",
+        "name": "Tears don't fall",
+        "label": "tears_dont_fall"
+    },
+
+    {
+        "id"  : 12,
+        "group": "Deep Purple",
+        "name": "Smoke On The Water",
+        "label": ""
+    },
+
+    {
+        "id"  : 13,
+        "group": "Dragonforce",
+        "name": "Through The Fire And Flames",
+        "label": "through_the_fire_and_flames"
+    },
+
+    {
+        "id"  : 14,
+        "group": "Epica",
+        "name": "Feint",
+        "label": "feint"
+    },
+
+    {
+        "id"  : 15,
+        "group": "Dio",
+        "name": "Rainbow In The Dark",
+        "desc": "rainbow_in_the_dark"
+    },
+
+    {
+        "id"  : 16,
+        "group": "Helloween",
+        "name": "I want out",
+        "desc": "i_want_out"
+    },
+
+    {
+        "id"  : 17,
+        "group": "Rhapsody",
+        "name": "Emerald Sword",
+        "desc": "emerald_sword"
+    },
+
+    {
+        "id"  : 18,
+        "group": "Manowar",
+        "name": "Die For Metal",
+        "desc": "die_for_metal"
+    },
+
+    {
+        "id"  : 19,
+        "group": "Iron Maiden",
+        "name": "Run To The Hills",
+        "desc": "run_to_the_hills"
+    },
+
+    {
+        "id"  : 20,
+        "group": "AC/DC",
+        "name": "Highway to Hell",
+        "desc": "highway_to_hell"
+    },
+
+    {
+        "id"  : 21,
+        "group": "Motörhead",
+        "name": "Ace of Spades",
+        "desc": "ace_of_spades"
+    }
+]

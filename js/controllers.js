@@ -64,5 +64,38 @@ function SongCtrl($scope, $routeParams, $http) {
     $scope.song = data;
     $scope.$root.pageTitle = $scope.song.name;
   });
+
+  $scope.correct = function ($event) {
+    $event.preventDefault();
+
+    var lyrics, inputs, inputCount, result, input, correct, inputCorrect;
+
+    lyrics = $("#lyrics");
+    inputs = lyrics.find("input");
+    inputCount = inputs.length;
+    result = $("#result");
+
+    correct = true;
+    inputCorrect = 0;
+
+    inputs.each(function(index, el) {
+      input = $(this);
+      if(input.val().toLowerCase() == input.data("result").toLowerCase()) {
+        input.css({"border-color": "#468847", "color": "#468847"});
+        inputCorrect += 1;
+      } else {
+        input.css({"border-color": "#b94a48", "color": "#b94a48"});
+        correct = false;
+      }
+    });
+
+    result.html(inputCorrect+"/"+inputCount).fadeIn();
+    if(correct) {
+      result.css({"border-color": "#468847", "color": "#468847"});
+      alert("CORRECT!");
+    }
+
+    return false;
+  };
 }
 SongCtrl.$inject = ['$scope', '$routeParams', '$http'];

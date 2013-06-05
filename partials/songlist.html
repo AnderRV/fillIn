@@ -7,7 +7,7 @@
 <div class="row">
     <div class="span10 offset2" ng-show="songs">
         <input ng-model="query.name" type="text" class="input-medium search-query" placeholder="Song">
-        <input ng-model="query.group" type="text" class="input-medium search-query" placeholder="Group">
+        <input ng-model="query.band" type="text" class="input-medium search-query" placeholder="Band">
 
         <span  class="nullable">
           <select ng-model="pageSize" ng-options="s for s in [5, 10, 20]"></select>
@@ -32,9 +32,9 @@
                         <a href="" ng-click="predicate = 'name'; reverse=true"><i class="icon-arrow-down"></i></a>
                     </th>
                     <th>
-                        Group
-                        <a href="" ng-click="predicate = 'group'; reverse=false"><i class="icon-arrow-up"></i></a>
-                        <a href="" ng-click="predicate = 'group'; reverse=true"><i class="icon-arrow-down"></i></a>
+                        Band
+                        <a href="" ng-click="predicate = 'band'; reverse=false"><i class="icon-arrow-up"></i></a>
+                        <a href="" ng-click="predicate = 'band'; reverse=true"><i class="icon-arrow-down"></i></a>
                     </th>
                 </tr>
             </thead>
@@ -43,7 +43,7 @@
 
                     <td><i class="icon-pencil"></i> {{song.id}}</td>
                     <td><a href="#/song/{{song.id}}">{{song.name}}</a></td>
-                    <td>{{song.group}}</td>
+                    <td>{{song.band}}</td>
 
                 </tr> 
             </tbody>

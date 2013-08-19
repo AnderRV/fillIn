@@ -144,5 +144,12 @@
         "band": "Motörhead",
         "name": "Ace of Spades",
         "desc": "ace_of_spades"
+    },
+
+    {
+        "id"  : 22,
+        "band": "Avantasia",
+        "name": "The Toy Master",
+        "desc": "the_toy_master"
     }
 ]

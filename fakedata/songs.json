@@ -73,21 +73,23 @@
         "id"  : 11,
         "band": "Bullet for My Valentine",
         "name": "Tears don't fall",
-        "label": "tears_dont_fall"
+        "label": "tears_dont_fall",
+        "hard": true
     },
 
     {
         "id"  : 12,
         "band": "Deep Purple",
         "name": "Smoke On The Water",
-        "label": ""
+        "label": "smoke_on_the_water"
     },
 
     {
         "id"  : 13,
         "band": "Dragonforce",
         "name": "Through The Fire And Flames",
-        "label": "through_the_fire_and_flames"
+        "label": "through_the_fire_and_flames",
+        "hard": true
     },
 
     {
@@ -101,55 +103,120 @@
         "id"  : 15,
         "band": "Dio",
         "name": "Rainbow In The Dark",
-        "desc": "rainbow_in_the_dark"
+        "label": "rainbow_in_the_dark"
     },
 
     {
         "id"  : 16,
         "band": "Helloween",
         "name": "I want out",
-        "desc": "i_want_out"
+        "label": "i_want_out"
     },
 
     {
         "id"  : 17,
         "band": "Rhapsody",
         "name": "Emerald Sword",
-        "desc": "emerald_sword"
+        "label": "emerald_sword"
     },
 
     {
         "id"  : 18,
         "band": "Manowar",
         "name": "Die For Metal",
-        "desc": "die_for_metal"
+        "label": "die_for_metal"
     },
 
     {
         "id"  : 19,
         "band": "Iron Maiden",
         "name": "Run To The Hills",
-        "desc": "run_to_the_hills"
+        "label": "run_to_the_hills"
     },
 
     {
         "id"  : 20,
         "band": "AC/DC",
         "name": "Highway to Hell",
-        "desc": "highway_to_hell"
+        "label": "highway_to_hell"
     },
 
     {
         "id"  : 21,
         "band": "Motörhead",
         "name": "Ace of Spades",
-        "desc": "ace_of_spades"
+        "label": "ace_of_spades"
     },
 
     {
         "id"  : 22,
         "band": "Avantasia",
         "name": "The Toy Master",
-        "desc": "the_toy_master"
+        "label": "the_toy_master"
+    },
+
+    {
+        "id"  : 23,
+        "band": "Black Sabbath",
+        "name": "Paranoid",
+        "label": "paranoid"
+    },
+
+    {
+        "id"  : 24,
+        "band": "Dire Straits",
+        "name": "Walk Of Life",
+        "label": "walk_of_life",
+        "hard": true
+    },
+
+    {
+        "id"  : 25,
+        "band": "Dream Theater",
+        "name": "Pull me Under",
+        "label": "pull_me_under",
+        "hard": true
+    },
+
+    {
+        "id"  : 26,
+        "band": "Edguy",
+        "name": "Lavatory Love Machine",
+        "label": "lavatory_love_machine"
+    },
+
+    {
+        "id"  : 27,
+        "band": "KISS",
+        "name": "I Was Made for Lovin' You",
+        "label": "i_was_mad_for_lovin_you"
+    },
+
+    {
+        "id"  : 28,
+        "band": "Korpiklaani",
+        "name": "Vodka",
+        "label": "vodka"
+    },
+
+    {
+        "id"  : 29,
+        "band": "Lacuna Coil",
+        "name": "Our Truth",
+        "label": "our_truth"
+    },
+
+    {
+        "id"  : 30,
+        "band": "Popular song (Leaves Eyes version)",
+        "name": "Scarborough Fair",
+        "label": "scarborough_fair"
+    },
+
+    {
+        "id"  : 31,
+        "band": "Led Zeppelin",
+        "name": "Rock and Roll",
+        "label": "rock_and_roll"
     }
 ]

@@ -11,8 +11,12 @@
 
         <span  class="nullable">
           <select ng-model="pageSize" ng-options="s for s in [5, 10, 20]"></select>
-        </span><br/>
+        </span>
 
+        <label>
+            <input ng-model="query.hard" data-ng-false-value="" type="checkbox"> Hard
+        </label><br/>
+        
         <p>TOTAL: {{songs.length}}</p>
         <p>SHOWING: {{filteredSongs.length}}</p>
 

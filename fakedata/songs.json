@@ -219,5 +219,19 @@
         "band": "Led Zeppelin",
         "name": "Rock and Roll",
         "label": "rock_and_roll"
+    },
+
+    {
+        "id"  : 32,
+        "band": "Marilyn Manson",
+        "name": "The Beautiful People",
+        "label": "the_beautiful_people"
+    },
+
+    {
+        "id"  : 33,
+        "band": "Manowar",
+        "name": "Die for Metal",
+        "label": "die_for_metal"
     }
 ]

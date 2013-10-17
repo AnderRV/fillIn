@@ -182,7 +182,8 @@
         "id"  : 26,
         "band": "Edguy",
         "name": "Lavatory Love Machine",
-        "label": "lavatory_love_machine"
+        "label": "lavatory_love_machine",
+        "hard": true
     },
 
     {

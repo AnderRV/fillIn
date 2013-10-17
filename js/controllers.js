@@ -80,7 +80,7 @@ function SongCtrl($scope, $routeParams, $http) {
 
     inputs.each(function(index, el) {
       input = $(this);
-      if(input.val().toLowerCase() == input.data("result").toLowerCase()) {
+      if(input.val().toLowerCase() == input.data("result").toString().toLowerCase()) {
         input.css({"border-color": "#468847", "color": "#468847"});
         inputCorrect += 1;
       } else {

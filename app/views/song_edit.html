@@ -1,0 +1,35 @@
+<form name="songedit">
+    <div class="page-header">
+        <h1 class="offset1">
+            <input ng-model="song.name" value="{{song.name}}" required>
+            <small>
+                <input ng-model="song.band" value="{{song.band}}" required>
+                <a ng-href="#/song/{{song._id}}">
+                    <i class="icon-circle-arrow-left"></i>
+                </a>
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="span10 offset2">
+            <div id="lyrics">
+                <label>
+                    <input ng-model="song.hard" data-ng-false-value="" type="checkbox"> Hard
+                </label><br/>
+
+                <textarea ng-model="song.desc" required>{{song.desc}}</textarea>
+            </div>
+
+            <br />
+
+            <p id="result"></p>
+            <button id="send_btn" ng-click="save()" ng-disabled="songedit.$invalid" class="btn">SAVE</button>
+            <button id="del_btn" ng-click="delete()" ng-show="song.$_id" class="btn btn-danger">DELETE</button>
+
+            <br />
+
+            <a ng-href="#/song/{{song._id}}">Back to song</a>
+        </div>
+    </div>
+</form>

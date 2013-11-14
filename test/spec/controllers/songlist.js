@@ -13,16 +13,16 @@ describe('Controller: SonglistCtrl', function () {
     $httpBackend = $injector.get('$httpBackend');
 
     // backend definition common for all tests
-    $httpBackend.when('GET', 'fakedata/songs.json').
+    $httpBackend.when('GET', 'http://127.0.0.1:3210/songs').
       respond(
         [{
-          "id" : 1,
+          "_id" : '5281412e11c93dd66fb8d63b',
           "band": "TestBand",
           "name": "Test Song Name",
           "label": "test_label"
         },
         {
-          "id" : 2,
+          "_id" : '52852983771d6f740b000001',
           "band": "TestBand2",
           "name": "Test Song Name 2",
           "label": "test_label_2"
@@ -55,7 +55,7 @@ describe('Controller: SonglistCtrl', function () {
     var controller = createController();
     $httpBackend.flush();
 
-    $httpBackend.expectGET('fakedata/songs.json');
+    $httpBackend.expectGET('http://127.0.0.1:3210/songs');
     expect($rootScope.songs.length).toBe(2);
     expect($rootScope.songs[0].name).toBe("Test Song Name");
     expect($rootScope.songs[1].band).toBe("TestBand2");

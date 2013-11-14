@@ -10,6 +10,14 @@ angular.module('fillInApp', [
       .when('/songlist', {
         templateUrl: 'views/songlist.html',
         controller: 'SonglistCtrl'
+      }).
+      when('/song/new', {
+        templateUrl:'views/song_edit.html',
+        controller: 'SongCreateCtrl'
+      })
+      .when('/song/:itemId/edit', {
+        templateUrl: 'views/song_edit.html',
+        controller: 'SongCtrl'
       })
       .when('/song/:itemId', {
         templateUrl: 'views/song.html',

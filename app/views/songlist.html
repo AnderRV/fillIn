@@ -1,7 +1,7 @@
 <div ng:init="$root.pageTitle = 'Song List'"></div>
 
 <div class="page-header">
-    <h1 class="offset1">Fill in the blanks <small>English exercise</small></h1>
+    <h1 class="offset1">Fill in the blanks <small>English exercise</small> <a ng-href="#/song/new"><i class="icon-plus-sign"></i></a></h1>
 </div>
 
 <div class="row">
@@ -25,28 +25,28 @@
                 <tr>
 <!--<a href="" ng-click="predicate = 'name'; reverse=false">Name</a> (<a href ng-click="predicate = '-name'; reverse=false">^</a>)-->
 
-                    <th>
+                    <!--<th>
                         #
                         <a href="" ng-click="predicate = 'id'; reverse=false"><i class="icon-arrow-up"></i></a>
                         <a href="" ng-click="predicate = 'id'; reverse=true"><i class="icon-arrow-down"></i></a>
-                    </th>
+                    </th>-->
                     <th>
                         Song name
-                        <a href="" ng-click="predicate = 'name'; reverse=false"><i class="icon-arrow-up"></i></a>
-                        <a href="" ng-click="predicate = 'name'; reverse=true"><i class="icon-arrow-down"></i></a>
+                        <a ng-href="" ng-click="predicate = 'name'; reverse=false"><i class="icon-arrow-up"></i></a>
+                        <a ng-href="" ng-click="predicate = 'name'; reverse=true"><i class="icon-arrow-down"></i></a>
                     </th>
                     <th>
                         Band
-                        <a href="" ng-click="predicate = 'band'; reverse=false"><i class="icon-arrow-up"></i></a>
-                        <a href="" ng-click="predicate = 'band'; reverse=true"><i class="icon-arrow-down"></i></a>
+                        <a ng-href="" ng-click="predicate = 'band'; reverse=false"><i class="icon-arrow-up"></i></a>
+                        <a ng-href="" ng-click="predicate = 'band'; reverse=true"><i class="icon-arrow-down"></i></a>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="song in filteredSongs | orderBy:predicate:reverse | startFrom:currentPage*pageSize | limitTo:pageSize">
 
-                    <td><i class="icon-pencil"></i> {{song.id}}</td>
-                    <td><a href="#/song/{{song.id}}">{{song.name}}</a></td>
+                    <!--<td><i class="icon-pencil"></i> {{song._id}}</td>-->
+                    <td><a ng-href="#/song/{{song._id}}">{{song.name}}</a></td>
                     <td>{{song.band}}</td>
 
                 </tr> 
@@ -66,7 +66,7 @@
                 </li>
 -->
                 <li ng-class="{disabled: currentPage >= filteredSongs.length/pageSize - 1}">
-                    <a href ng-click="nextPage()">Next »</a>
+                    <a ng-href ng-click="nextPage()">Next »</a>
                 </li>
             </ul>
         </div>

@@ -30,3 +30,11 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+#lyrics {
+    textarea {
+        resize: vertical;
+        width: 100%;
+        min-height: 400px;
+    }
+}

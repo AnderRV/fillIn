@@ -81,17 +81,17 @@ function SongCtrl($scope, $routeParams, $http) {
     inputs.each(function(index, el) {
       input = $(this);
       if(input.val().toLowerCase() == input.data("result").toString().toLowerCase()) {
-        input.css({"border-color": "#468847", "color": "#468847"});
+        input.removeClass("error").addClass("correct");
         inputCorrect += 1;
       } else {
-        input.css({"border-color": "#b94a48", "color": "#b94a48"});
+        input.removeClass("correct").addClass("error");
         correct = false;
       }
     });
 
     result.html(inputCorrect+"/"+inputCount).fadeIn();
     if(correct) {
-      result.css({"border-color": "#468847", "color": "#468847"});
+      result.addClass("correct");
       alert("CORRECT!");
     }
 

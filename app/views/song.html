@@ -1,9 +1,9 @@
 <div class="page-header">
     <h1 class="offset1">{{song.name}}
         <small>{{song.band}}
-            <a href="#/songlist"><i class="icon-circle-arrow-left"></i></a>
-            <a ng-href="#/song/{{song._id}}/edit"><i class="icon-edit"></i></a>
-            <a ng-href="#" ng-click="delete()"><i class="icon-trash"></i></a>
+            <a href="#/songlist" title="Back to songlist"><i class="icon-circle-arrow-left"></i></a>
+            <a ng-href="#/song/{{song._id}}/edit" title="Edit song"><i class="icon-edit"></i></a>
+            <a ng-href="#" ng-click="delete()" title="Delete song"><i class="icon-trash"></i></a>
         </small>
     </h1>
 </div>
@@ -17,10 +17,10 @@
         <br />
 
         <p id="result"></p>
-        <button id="send_btn" class="btn" ng-click="correct($event)">CHECK</button>
 
-        <br />
-
-        <a ng-href="#/songlist">Back to songlist</a>
+        <div class="form-actions">
+            <button id="send_btn" class="btn btn-primary" ng-click="correct($event)">Check</button>
+            <a ng-href="#/songlist" class="btn">Back to songlist</a>
+        </div>
     </div>
 </div>

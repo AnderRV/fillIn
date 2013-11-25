@@ -1,35 +1,39 @@
 <div ng:init="$root.pageTitle = 'Song List'"></div>
 
 <div class="page-header">
-    <h1 class="offset1">Fill in the blanks <small>English exercise</small> <a ng-href="#/song/new"><i class="icon-plus-sign"></i></a></h1>
+    <h1 class="offset1">Fill in the blanks
+        <small>English exercise</small>
+        <a ng-href="#/song/new" title="New song"><i class="icon-plus-sign"></i></a>
+    </h1>
 </div>
 
 <div class="row">
-    <div class="span10 offset2" ng-show="songs">
-        <input ng-model="query.name" type="text" class="input-medium search-query" placeholder="Song">
-        <input ng-model="query.band" type="text" class="input-medium search-query" placeholder="Band">
+    <div class="span10 offset2 songlist" ng-show="songs">
+        <form class="form-inline">
+            <div class="control-group">
+                <input ng-model="query.name" type="text" class="input-medium search-query" placeholder="Song">
+                <input ng-model="query.band" type="text" class="input-medium search-query" placeholder="Band">
 
-        <span  class="nullable">
-          <select ng-model="pageSize" ng-options="s for s in [5, 10, 20]"></select>
-        </span>
+                <label class="checkbox">
+                    <input ng-model="query.hard" data-ng-false-value="" type="checkbox"> Hard
+                </label>
 
-        <label>
-            <input ng-model="query.hard" data-ng-false-value="" type="checkbox"> Hard
-        </label><br/>
-        
-        <p>TOTAL: {{songs.length}}</p>
-        <p>SHOWING: {{filteredSongs.length}}</p>
+                <span  class="nullable">
+                  <select ng-model="pageSize" ng-options="s for s in [5, 10, 20]"></select>
+                </span>
+            </div>
+
+            <div class="control-group">
+                <label>Total: <strong>{{songs.length}}</strong></label>
+            </div>
+            <div class="control-group">
+                <label>Showing: <strong>{{filteredSongs.length}}</strong></label>
+            </div>
+        </form>
 
         <table class="table table-striped">
             <thead>
                 <tr>
-<!--<a href="" ng-click="predicate = 'name'; reverse=false">Name</a> (<a href ng-click="predicate = '-name'; reverse=false">^</a>)-->
-
-                    <!--<th>
-                        #
-                        <a href="" ng-click="predicate = 'id'; reverse=false"><i class="icon-arrow-up"></i></a>
-                        <a href="" ng-click="predicate = 'id'; reverse=true"><i class="icon-arrow-down"></i></a>
-                    </th>-->
                     <th>
                         Song name
                         <a ng-href="" ng-click="predicate = 'name'; reverse=false"><i class="icon-arrow-up"></i></a>
@@ -42,48 +46,29 @@
                     </th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr ng-repeat="song in filteredSongs | orderBy:predicate:reverse | startFrom:currentPage*pageSize | limitTo:pageSize">
-
-                    <!--<td><i class="icon-pencil"></i> {{song._id}}</td>-->
                     <td><a ng-href="#/song/{{song._id}}">{{song.name}}</a></td>
                     <td>{{song.band}}</td>
-
                 </tr> 
             </tbody>
 
-<tfoot>
-    <td colspan="3">
-        <div class="pagination pull-right">
-            {{currentPage+1}}/{{numberOfPages}}
-            <ul>
-                <li ng-class="{disabled: currentPage <= 0}">
-                    <a href ng-click="prevPage()">« Prev</a>
-                </li>
-<!--
-                <li ng-repeat="n in paginationPages">
-                    <a href> - {{n}} - </a>
-                </li>
--->
-                <li ng-class="{disabled: currentPage >= filteredSongs.length/pageSize - 1}">
-                    <a ng-href ng-click="nextPage()">Next »</a>
-                </li>
-            </ul>
-        </div>
-    </td>
-</tfoot>
+            <tfoot>
+                <td colspan="3">
+                    <div class="pagination pull-right">
+                        <span class="badge">{{currentPage+1}}/{{numberOfPages}}</span>
+                        <ul>
+                            <li ng-class="{disabled: currentPage <= 0}">
+                                <a href ng-click="prevPage()">« Prev</a>
+                            </li>
+                            <li ng-class="{disabled: currentPage >= filteredSongs.length/pageSize - 1}">
+                                <a ng-href ng-click="nextPage()">Next »</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tfoot>
         </table>
-
-<!--
-
-                <li ng-repeat="n in range(filteredSongs.length)" ng-class="{active: n == currentPage}" ng-click="setPage()">
-                    <a href ng-bind="n + 1">1</a>
-                </li>
-
-        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">Previous</button>
-        {{currentPage+1}}/{{numberOfPages}}
-        <button ng-disabled="currentPage >= filteredSongs.length/pageSize - 1" ng-click="currentPage=currentPage+1">Next</button>
--->
-
     </div>
 </div>

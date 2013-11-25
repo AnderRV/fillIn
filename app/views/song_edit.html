@@ -4,7 +4,7 @@
             <input ng-model="song.name" value="{{song.name}}" required>
             <small>
                 <input ng-model="song.band" value="{{song.band}}" required>
-                <a ng-href="#/song/{{song._id}}">
+                <a ng-href="#/song/{{song._id}}" title="Back">
                     <i class="icon-circle-arrow-left"></i>
                 </a>
             </small>
@@ -24,12 +24,14 @@
             <br />
 
             <p id="result"></p>
-            <button id="send_btn" ng-click="save()" ng-disabled="songedit.$invalid" class="btn">SAVE</button>
-            <button id="del_btn" ng-click="delete()" ng-show="song.$_id" class="btn btn-danger">DELETE</button>
 
-            <br />
+            <div class="form-actions">
+                <button id="send_btn" ng-click="save()" ng-disabled="songedit.$invalid" class="btn btn-primary">Save</button>
+                <button id="del_btn" ng-click="delete()" ng-show="song._id" class="btn btn-danger">Delete</button>
 
-            <a ng-href="#/song/{{song._id}}">Back to song</a>
+                <a ng-href="#/songlist" ng-hide="song._id" class="btn">Cancel</a>
+                <a ng-href="#/song/{{song._id}}" ng-show="song._id" class="btn">Cancel</a>
+            </div>
         </div>
     </div>
 </form>

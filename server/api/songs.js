@@ -17,7 +17,8 @@ exports.song = function(req, res, next, id) {
       return next(err);
     }
     if (!song) {
-      return next(new Error('Failed to find song ' + id));
+      res.send(404);
+      // return next(new Error('Failed to find song ' + id));
     }
     req.song = song;
     next();
@@ -41,7 +42,6 @@ exports.all = function(req, res) {
  */
 exports.get = function(req, res) {
   'use strict';
-
   res.jsonp(req.song);
 };
 

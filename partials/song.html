@@ -1,5 +1,9 @@
 <div class="page-header">
-    <h1 class="offset1">{{song.name}} <small>{{song.band}} <a href="#/songlist"><i class="icon-circle-arrow-left"></i></a></small></h1>
+    <h1 class="offset1">{{song.name}}
+        <small>{{song.band}}
+            <a href="#/songlist" title="Back to songlist"><i class="icon-circle-arrow-left"></i></a>
+        </small>
+    </h1>
 </div>
 
 <div class="row">
@@ -11,10 +15,10 @@
         <br />
 
         <p id="result"></p>
-        <button id="send_btn" class="btn" ng-click="correct($event)">CHECK</button>
 
-        <br />
-
-        <a href="#/songlist">Back to songlist</a>
+        <div class="form-actions">
+            <button id="send_btn" class="btn btn-primary" ng-click="correct($event)">Check</button>
+            <a href="#/songlist" class="btn">Back to songlist</a>
+        </div>
     </div>
 </div>
